@@ -72,7 +72,7 @@ class LangtonAnt:
 		self.position = (next_x, next_y)
 		self.move_count += 1
 		return {
-			'pred': ((x,y), direction, self.state),
+			'pred': ((x,y), direction, state),
 			'next': (self.position, self.direction, self.cells_grid[next_x][next_y])
 			}
 		
@@ -91,9 +91,15 @@ class LangtonAnt:
 	
 	def get_position(self):
 		return self.position
+		
+	def set_position(self, position):
+		self.position = position
 	
 	def get_direction(self):
 		return self.direction
+		
+	def set_direction(self, direction):
+		self.direction = direction
 		
 	def get_move_count(self):
 		return self.move_count
