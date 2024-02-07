@@ -32,7 +32,7 @@ class LangtonAnt:
 		self.state = initial_state
 		self.position = (int(max_x/2), int(max_y/2))
 		self.direction = direction
-		self.cells_grid = [[WHITE]*max_x for _ in range(max_y)]
+		self.cells_grid = [[WHITE]*max_y for _ in range(max_x)]
 		self.move_count = 0
 		self.initial = None
 
