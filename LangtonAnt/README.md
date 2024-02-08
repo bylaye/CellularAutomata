@@ -15,7 +15,9 @@ change la couleur de la case en blanche et avance d'une case.
 * Si la fourmi est sur une case blanche, elle tourne de 90° vers la droite, 
 change la couleur de la case en noire et avance d'une case.
 
-## 2. Lancer le programme
+## 2. Lancer la simulation
+
+### a. CLI mode
 
 ```
 git clone https://github.com/bylaye/CellularAutomata
@@ -131,3 +133,13 @@ Initialise position : None \
 move count : 9 \
 current position :  (10, 9) direction : LEFT
 
+
+### b. Graphique interface mode (tkinter)
+```
+python UIGrid2D.py
+```
+ou 
+```
+python3 UIGrid2D.py
+```
+![](screen.png)
