@@ -23,7 +23,7 @@ MAT_Y = int(MAX_Y / CELLULE_SIZE)
 INTERVAL_SIMULATION = 200 #millisecond unit
 
 root = Tk()
-root.title('Max Carrot Rewarded')
+root.title('Langton Ant')
 canvas = Canvas(root,  width=MAX_X, height=MAX_Y, background=COLOR_BACKGROUND_CANVAS)
 #canvas.pack(fill='both', expand=True)
 
