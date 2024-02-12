@@ -59,7 +59,6 @@ class SimpleCellular:
         new_triplet = ''
         for t in triplet:
             new_triplet += '1' if t == self.state_1 else '0'
-        print(triplet, new_triplet)
         return self.state_1 if self.rules_pattern[new_triplet] == 1 else self.state_0
     
     """ etat t+1 de la cellule a totalement a gauche qui n'a pas de voisine gauche"""
