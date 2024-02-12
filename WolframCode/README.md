@@ -75,3 +75,48 @@ ooo o oo   oo o   oo oooooo o oooooooooo
   oooo o o  ooo o  oo     oooo          
      ooooo    ooo   o ooo    o ooooooooo
 ```
+
+rule = 90 avec 30 dans une grille de dimension 30x100
+
+```
+Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from SimpleCellular import SimpleCellular
+>>> sc = SimpleCellular(rule=90, state_0=' ', state_1 = 'o', max_x=30, max_y=100)
+>>> for _ in range(30):
+...     sc.update()
+... 
+>>> print(sc)
+                                                  o                                                 
+                                                 o o                                                
+                                                o   o                                               
+                                               o o o o                                              
+                                              o       o                                             
+                                             o o     o o                                            
+                                            o   o   o   o                                           
+                                           o o o o o o o o                                          
+                                          o               o                                         
+                                         o o             o o                                        
+                                        o   o           o   o                                       
+                                       o o o o         o o o o                                      
+                                      o       o       o       o                                     
+                                     o o     o o     o o     o o                                    
+                                    o   o   o   o   o   o   o   o                                   
+                                   o o o o o o o o o o o o o o o o                                  
+                                  o                               o                                 
+                                 o o                             o o                                
+                                o   o                           o   o                               
+                               o o o o                         o o o o                              
+                              o       o                       o       o                             
+                             o o     o o                     o o     o o                            
+                            o   o   o   o                   o   o   o   o                           
+                           o o o o o o o o                 o o o o o o o o                          
+                          o               o               o               o                         
+                         o o             o o             o o             o o                        
+                        o   o           o   o           o   o           o   o                       
+                       o o o o         o o o o         o o o o         o o o o                      
+                      o       o       o       o       o       o       o       o                     
+                     o o     o o     o o     o o     o o     o o     o o     o o                    
+
+>>> 
+```
