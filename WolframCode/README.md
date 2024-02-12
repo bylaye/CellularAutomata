@@ -45,7 +45,7 @@ from SimpleCellular import SimpleCellular
 max_line = 20
 ```
 ```
-sc = SimpleCellular(rule=101, state_0=' ', state_1 = 'o', max_x=max_line, max_y=120)
+sc = SimpleCellular(rule=101, state_0=' ', state_1 = 'o', max_x=max_line, max_y=40)
 ```
 ```
 >>> for _ in range(20):
@@ -57,23 +57,23 @@ print(sc)
 ```
 
 >output\
-ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo o oooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                                          oooo                                                          \
-ooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    o ooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                                        o oo oo                                                         \
-ooooooooooooooooooooooooooooooooooooooooooooooooooooooo oo oo o oooooooooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                                      oo oo oooo                                                        \
-ooooooooooooooooooooooooooooooooooooooooooooooooooooo  oo oo   o ooooooooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                                    o   oo o o oo                                                       \
-ooooooooooooooooooooooooooooooooooooooooooooooooooo o o  oooooo o oooooooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                                  ooooo       oooo                                                      \
-ooooooooooooooooooooooooooooooooooooooooooooooooo     o ooooo    o ooooooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                                o ooo oo    o oo oo                                                     \
-ooooooooooooooooooooooooooooooooooooooooooooooo oo  oo o oo oo oo o oooooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                              oo o   oooo oo oo oooo                                                    \
-ooooooooooooooooooooooooooooooooooooooooooooo  ooo o    oo oo oo   o ooooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                            o    ooo oo  oo oo o o oo                                                   \
-ooooooooooooooooooooooooooooooooooooooooooo o oo   oo o   oo oooooo o oooooooooooooooooooooooooooooooooooooooooooooooooo\
-                                          oooo o o  ooo o  oo     oooo                                                  \
-ooooooooooooooooooooooooooooooooooooooooo    ooooo    ooo   o ooo    o ooooooooooooooooooooooooooooooooooooooooooooooooo\
+ooooooooooooooooooo o oooooooooooooooooo\
+                  oooo                  \
+ooooooooooooooooo    o ooooooooooooooooo\
+                o oo oo                 \
+ooooooooooooooo oo oo o oooooooooooooooo\
+              oo oo oooo                \
+ooooooooooooo  oo oo   o ooooooooooooooo\
+            o   oo o o oo               \
+ooooooooooo o o  oooooo o oooooooooooooo\
+          ooooo       oooo              \
+ooooooooo     o ooooo    o ooooooooooooo\
+        o ooo oo    o oo oo             \
+ooooooo oo  oo o oo oo oo o oooooooooooo\
+      oo o   oooo oo oo oooo            \
+ooooo  ooo o    oo oo oo   o ooooooooooo\
+    o    ooo oo  oo oo o o oo           \
+ooo o oo   oo o   oo oooooo o oooooooooo\
+  oooo o o  ooo o  oo     oooo          \
+     ooooo    ooo   o ooo    o ooooooooo
 
