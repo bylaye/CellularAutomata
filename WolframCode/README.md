@@ -53,27 +53,25 @@ sc = SimpleCellular(rule=101, state_0=' ', state_1 = 'o', max_x=max_line, max_y=
 ... 
 ```
 ```
-print(sc)
-```
-
->output\
-ooooooooooooooooooo o oooooooooooooooooo\
-                  oooo                  \
-ooooooooooooooooo    o ooooooooooooooooo\
-                o oo oo                 \
-ooooooooooooooo oo oo o oooooooooooooooo\
-              oo oo oooo                \
-ooooooooooooo  oo oo   o ooooooooooooooo\
-            o   oo o o oo               \
-ooooooooooo o o  oooooo o oooooooooooooo\
-          ooooo       oooo              \
-ooooooooo     o ooooo    o ooooooooooooo\
-        o ooo oo    o oo oo             \
-ooooooo oo  oo o oo oo oo o oooooooooooo\
-      oo o   oooo oo oo oooo            \
-ooooo  ooo o    oo oo oo   o ooooooooooo\
-    o    ooo oo  oo oo o o oo           \
-ooo o oo   oo o   oo oooooo o oooooooooo\
-  oooo o o  ooo o  oo     oooo          \
+>>> print(sc)
+                    o                   
+ooooooooooooooooooo o oooooooooooooooooo
+                  oooo                  
+ooooooooooooooooo    o ooooooooooooooooo
+                o oo oo                 
+ooooooooooooooo oo oo o oooooooooooooooo
+              oo oo oooo                
+ooooooooooooo  oo oo   o ooooooooooooooo
+            o   oo o o oo               
+ooooooooooo o o  oooooo o oooooooooooooo
+          ooooo       oooo              
+ooooooooo     o ooooo    o ooooooooooooo
+        o ooo oo    o oo oo             
+ooooooo oo  oo o oo oo oo o oooooooooooo
+      oo o   oooo oo oo oooo            
+ooooo  ooo o    oo oo oo   o ooooooooooo
+    o    ooo oo  oo oo o o oo           
+ooo o oo   oo o   oo oooooo o oooooooooo
+  oooo o o  ooo o  oo     oooo          
      ooooo    ooo   o ooo    o ooooooooo
-
+```
