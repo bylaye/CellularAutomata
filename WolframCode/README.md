@@ -26,4 +26,54 @@ regle 31
  0    0    0    1    1    1    1    1
 ```
 
+# Simulation
+```
+git clone https://github.com/bylaye/CellularAutomata && cd CellularAutomata/WolframCode
+```
+
+```
+python
+```
+ou
+```
+python3
+```
+```
+from SimpleCellular import SimpleCellular
+```
+```
+max_line = 20
+```
+```
+sc = SimpleCellular(rule=101, state_0=' ', state_1 = 'o', max_x=max_line, max_y=120)
+```
+```
+>>> for _ in range(20):
+...     sc.update()
+... 
+```
+```
+print(sc)
+```
+
+>output\
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo o oooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                                          oooo                                                          \
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    o ooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                                        o oo oo                                                         \
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooo oo oo o oooooooooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                                      oo oo oooo                                                        \
+ooooooooooooooooooooooooooooooooooooooooooooooooooooo  oo oo   o ooooooooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                                    o   oo o o oo                                                       \
+ooooooooooooooooooooooooooooooooooooooooooooooooooo o o  oooooo o oooooooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                                  ooooo       oooo                                                      \
+ooooooooooooooooooooooooooooooooooooooooooooooooo     o ooooo    o ooooooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                                o ooo oo    o oo oo                                                     \
+ooooooooooooooooooooooooooooooooooooooooooooooo oo  oo o oo oo oo o oooooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                              oo o   oooo oo oo oooo                                                    \
+ooooooooooooooooooooooooooooooooooooooooooooo  ooo o    oo oo oo   o ooooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                            o    ooo oo  oo oo o o oo                                                   \
+ooooooooooooooooooooooooooooooooooooooooooo o oo   oo o   oo oooooo o oooooooooooooooooooooooooooooooooooooooooooooooooo\
+                                          oooo o o  ooo o  oo     oooo                                                  \
+ooooooooooooooooooooooooooooooooooooooooo    ooooo    ooo   o ooo    o ooooooooooooooooooooooooooooooooooooooooooooooooo\
 
