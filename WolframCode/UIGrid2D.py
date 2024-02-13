@@ -52,22 +52,6 @@ def simulation():
         iteration = sc.next_line - 1
         print(iteration, MAT_X, MAT_Y)
         root.after(INTERVAL_SIMULATION, simulation)
-"""
-def simulation():
-    global label_text_id
-    move =  langton.ant_move()
-    pred = move['pred']
-    y,x = pred[0]
-    state = pred[2]
-    next_cell = move['next']
-    y_next,x_next = next_cell[0]
-    count = langton.get_move_count()
-    text_label = f'Total Move Count = {count}'
-    color = COLOR_LIGHT_CELLULE if state != la.WHITE else COLOR_DARK_CELLULE
-    r = (x*CELLULE_SIZE, y*CELLULE_SIZE, CELLULE_SIZE*(x+1), CELLULE_SIZE*(y+1))
-    canvas.create_rectangle(r, width = WIDTH_CELLULE_SEPARATOR,outline=COLOR_LINE_CELLULE_SEPARATOR, fill = color)
-    root.after(INTERVAL_SIMULATION, simulation)
-"""
 
 def play():
 	simulation()
