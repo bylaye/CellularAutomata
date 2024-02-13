@@ -25,11 +25,11 @@ class SimpleCellular:
         self.pattern_initial = pattern_initial
         self.max_x = max_x
         self.max_y = max_y
-        self.state_1 = state_1
-        self.state_0 = state_0
+        self.state_1 = str(state_1)
+        self.state_0 = str(state_0)
         self.plateau = [[state_0]*max_y for _ in range(max_x)]
         self.rules_pattern = self.rules()
-        self.plateau[0][int(max_y/2)] = state_1
+        self.plateau[0][int(max_y/2)] = str(state_1)
         self.next_line = 1
         
     def get_plateau(self):
@@ -63,7 +63,7 @@ class SimpleCellular:
     
     """ etat t+1 de la cellule a totalement a gauche qui n'a pas de voisine gauche"""
     def next_extreme_left(self,n):
-        l1 = self.plateau[n-1][0]
+        l1 = str(self.plateau[n-1][0])
         l2 = str(self.plateau[n-1][1])
         l3 = str(self.plateau[n-1][2])
         triplet = l1+l2+l3
@@ -72,7 +72,7 @@ class SimpleCellular:
     """ etat t+1 de la cellule a totalement a droite qui n'a pas de voisine droite"""
     def next_extreme_right(self,n):
         y = self.max_y
-        l1 = self.plateau[n-1][y-1]
+        l1 = str(self.plateau[n-1][y-1])
         l2 = str(self.plateau[n-1][y-2])
         l3 = str(self.plateau[n-1][y-3])
         triplet = l1+l2+l3
