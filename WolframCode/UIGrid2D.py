@@ -13,11 +13,11 @@ COLOR_OUTLINE_NEXT_CELLULE = 'yellow'
 COLOR_LABEL_TEXT = 'green'
 WIDTH_CELLULE_SEPARATOR = 1
 
-CELLULE_SIZE = 2
+CELLULE_SIZE = 4
 MIN_X = 0 #A ne pas changer
 MIN_Y = 0 #A ne pas changer
 MAX_X = 1200
-MAX_Y = 700
+MAX_Y = 600
 MAT_X = int(MAX_X / CELLULE_SIZE)
 MAT_Y = int(MAX_Y / CELLULE_SIZE)
 INTERVAL_SIMULATION = 20 #millisecond unit
@@ -35,7 +35,8 @@ def trace_cellule(CELLULE_SIZE, MIN_X, MAX_X, MIN_Y, MAX_Y):
 		#canvas.create_line((MIN_Y, j, MAX_X, j), width=WIDTH_CELLULE_SEPARATOR, fill=COLOR_LINE_CELLULE_SEPARATOR)
 		canvas.create_line((MIN_Y, j, MAX_X, j), width=WIDTH_CELLULE_SEPARATOR, fill=COLOR_LIGHT_CELLULE)
 
-sc = SimpleCellular(rule=101, state_1=1, state_0= 0, max_x= MAT_Y, max_y=MAT_X)
+RULE=133
+#sc = SimpleCellular(rule=RULE, state_1='1', state_0= '0', max_x= MAT_Y, max_y=MAT_X)
 
 def imprime(n):
     for y in range(MAT_X):
@@ -46,11 +47,14 @@ def imprime(n):
 iteration = 0
 def simulation():
     global iteration
-    if iteration < MAT_Y-1:
-        imprime(iteration)
+    if iteration == 0:
+        imprime(0)
+        iteration += 1
+    elif iteration < MAT_Y:
         sc.update()
-        iteration = sc.next_line - 1
-        print(iteration, MAT_X, MAT_Y)
+        imprime(iteration)
+        iteration = sc.next_line
+        print(f'Rule = {RULE} iteration : {iteration}, Y= {MAT_Y}',end='\r')
         root.after(INTERVAL_SIMULATION, simulation)
 
 def play():
@@ -59,8 +63,19 @@ def play():
 def run():
     trace_cellule(CELLULE_SIZE, MIN_X, MAX_X, MIN_Y, MAX_Y)
     start_simulation = Button(root, text='START SIMULATION', width=20, command=play)
-    start_simulation.pack(side=BOTTOM, padx=10, pady=20)
+    start_simulation.pack(side=BOTTOM, padx=5, pady=5)
     canvas.pack(expand=False)
     root.mainloop()
 
-run()
+if __name__ == '__main__':
+    import sys
+    print(sys.argv[0], sys.argv[1])
+    if len(sys.argv) == 2:
+        rule = int(sys.argv[1])
+        if rule >= 0 and rule < 256:
+            rule = rule
+    else:
+        rule = RULE
+    sc = SimpleCellular(rule=rule, state_1='1', state_0= '0', max_x= MAT_Y, max_y=MAT_X)
+    print(f'Start rule = {RULE}')
+    run()
