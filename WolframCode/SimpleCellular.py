@@ -29,7 +29,7 @@ class SimpleCellular:
         self.state_0 = str(state_0)
         self.plateau = [[state_0]*max_y for _ in range(max_x)]
         self.rules_pattern = self.rules()
-        self.plateau[0][int(max_y/2)] = str(state_1)
+        self.plateau[0][int(max_y/2)] = self.state_1
         self.next_line = 1
         
     def get_plateau(self):
