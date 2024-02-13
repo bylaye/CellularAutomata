@@ -26,7 +26,7 @@ regle 31
  0    0    0    1    1    1    1    1
 ```
 
-# Simulation
+## Simulation
 ```
 git clone https://github.com/bylaye/CellularAutomata && cd CellularAutomata/WolframCode
 ```
@@ -120,3 +120,14 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 >>> 
 ```
+
+## Simulation Interface Graphique
+```
+python3 UIGrid2D.py 137
+```
+![](images/137.png)
+
+```
+python3 UIGrid2D.py 133
+```
+![](images/133.png)
